@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Server Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Minecraft Server Checker</h1>
+        <p>Check server status, players, MOTD, and more.</p>
+      </header>
+
+      <section class="search-card">
+        <label for="serverInput">Server Address</label>
+        <div class="input-row">
+          <input
+            id="serverInput"
+            type="text"
+            placeholder="Example: mc.hypixel.net or play.example.com:25565"
+            autocomplete="off"
+          />
+          <button id="checkBtn">Check Server</button>
+        </div>
+        <small class="hint">Tip: You can include a port with host:port.</small>
+      </section>
+
+      <section id="statusBar" class="status-bar hidden" aria-live="polite"></section>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <div class="result-head">
+          <div>
+            <h2 id="serverTitle">Server Info</h2>
+            <p id="serverSubtitle"></p>
+          </div>
+          <img id="serverIcon" class="server-icon hidden" alt="Server icon" />
+        </div>
+
+        <div id="infoGrid" class="info-grid"></div>
+
+        <div id="motdBlock" class="motd-block hidden">
+          <h3>MOTD</h3>
+          <pre id="motdText"></pre>
+        </div>
+
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
